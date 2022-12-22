@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Main {
+	static long NumberSum(long N) {
+        //Write your code here
+		if(N == 1){
+			return N;
+		}
+		long snm1 = NumberSum(N-1);
+		long sn = N + snm1;
+		return sn;
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long N = scanner.nextLong();
+        System.out.println(NumberSum(N));
+    }
+}
